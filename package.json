@@ -1,6 +1,6 @@
 {
   "name": "path-value-extractor-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Retrieves a value from an object at a given dot or bracket path, indicating whether that path existed.",
   "type": "module",
   "main": "src/index.js",
