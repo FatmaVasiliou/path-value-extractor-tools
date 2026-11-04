@@ -39,3 +39,10 @@ treated as absent, not as "present but null". If you need the "present but null"
 fetch the parent with a shorter path and read the property yourself.
 - `exists` uses `hasOwnProperty`, so inherited properties on a plain object are treated
 as missing. Arrays use range-checked integer indexing.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
